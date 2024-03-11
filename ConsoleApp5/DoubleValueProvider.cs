@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    internal class ValueProvider
+    sealed class DoubleolValueProvider : ValueProvider<double>
     {
+        public override double RndCreate()
+        {
+            double value = Rnd.NextDouble() * 300 - 150;
+            return value;
+
+        }
     }
 }

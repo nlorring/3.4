@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    internal class ValueProvider
+    sealed class BoolValueProvider : ValueProvider<bool>
     {
+        public override bool RndCreate()
+        {
+            int value = Rnd.Next(0, 2);
+            if (value == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

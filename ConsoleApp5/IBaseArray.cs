@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    internal class ValueProvider
+    public interface IBaseArray
     {
+        void UserCreate();
+        void RndCreate();
+        decimal Average();
+
+        void Change();
     }
 }

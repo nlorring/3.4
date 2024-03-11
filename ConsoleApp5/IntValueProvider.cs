@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    internal class ValueProvider
+    sealed class IntValueProvider : ValueProvider<int>
     {
+        public override int RndCreate()
+        {
+            int value = Rnd.Next(-150, 150);
+            return value;
+        }
     }
 }

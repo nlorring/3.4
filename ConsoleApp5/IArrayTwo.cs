@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    internal class ValueProvider
+    public interface IArrayTwo
     {
+        void Snake();
+
     }
 }
